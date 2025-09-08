@@ -1,10 +1,10 @@
-/* Creación de variables a utilizar */
+
 :root {
-    --primary-color: #d81b60;       /* Rosa fuerte */
-    --secondary-color: #ad1457;    /* Rosa oscuro */
+    --primary-color: #e91e63;       /* Rosa fuerte */
+    --secondary-color: #c2185b;     /* Rosa oscuro */
     --text-color: #333333;
-    --background-color: #fff0f5;   /* Rosa muy claro de fondo */
-    --light-gray: #fce4ec;         /* Rosa pálido */
+    --background-color: #fce4ec;    /* Rosa claro */
+    --light-gray: #f8bbd0;          /* Rosa pálido */
 }
 
 body {
@@ -96,6 +96,7 @@ body {
 .section {
     padding: 10px 20px;
     text-align: center;
+    background-color: var(--background-color);
 }
 
 /* Perfil */
@@ -150,11 +151,11 @@ body {
 }
 
 .list li {
-    background-color: #f8bbd0; /* rosa suave */
+    background-color: var(--light-gray);
     border-left: 5px solid var(--primary-color);
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 5px rgba(216,27,96,0.3);
+    box-shadow: 0 2px 5px rgba(233,30,99,0.3);
     text-align: center;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -162,13 +163,13 @@ body {
 
 .list li:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(216,27,96,0.4);
+    box-shadow: 0 6px 12px rgba(233,30,99,0.4);
 }
 
 /* Habilidades */
 .list-inline li {
     display: inline-block;
-    background-color: #f48fb1;
+    background-color: var(--primary-color);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -177,7 +178,7 @@ body {
 }
 
 .list-inline li:hover {
-    background-color: #ec407a;
+    background-color: var(--secondary-color);
 }
 
 .skills-container {
@@ -200,7 +201,7 @@ body {
 }
 
 .linktree-link {
-    background-color: #f06292;
+    background-color: var(--primary-color);
     color: white;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -210,7 +211,7 @@ body {
 }
 
 .linktree-link:hover {
-    background-color: #f8bbd0;
+    background-color: var(--light-gray);
     color: var(--secondary-color);
 }
 
@@ -250,3 +251,4 @@ body {
     .list li {
         text-align: center;
     }
+}
