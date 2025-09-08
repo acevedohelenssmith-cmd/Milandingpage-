@@ -1,12 +1,11 @@
-/* Creación de variables a  utilizar */
+/* Creación de variables a utilizar */
 :root {
-    --primary-color: rgb(50,120,100);
-    --secondary-color: #934a19;
-    --text-color: #333333;;
-    --background-color: #f4f4f4;
-    --light-gray: #ecf0f1;
+    --primary-color: #d81b60;       /* Rosa fuerte */
+    --secondary-color: #ad1457;    /* Rosa oscuro */
+    --text-color: #333333;
+    --background-color: #fff0f5;   /* Rosa muy claro de fondo */
+    --light-gray: #fce4ec;         /* Rosa pálido */
 }
-
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -17,10 +16,11 @@ body {
     color: var(--text-color);
     scroll-behavior: smooth;
 }
-/*Sección para cambiar color de la barra de sección*/
+
+/* Header */
 .header {
     background: var(--secondary-color);
-    color: rgb(233, 85, 85);
+    color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -30,6 +30,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Menú */
 .nav-list {
     list-style: none;
     padding: 0;
@@ -43,11 +44,10 @@ body {
 .accordion-nav {
     position: relative;
     display: inline-block;
-    margin-right: 20px; /* Ajusta el margen a la derecha */
+    margin-right: 20px;
 }
 
 .accordion-nav summary {
-    list-style: none;
     cursor: pointer;
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
@@ -71,7 +71,7 @@ body {
 }
 
 .accordion-nav .nav-link {
-    color: white; /* Cambiar color de los enlaces dentro del acordeón */
+    color: white;
     padding: 0.5rem 0;
     display: block;
 }
@@ -80,9 +80,9 @@ body {
     color: var(--light-gray);
 }
 
-/*Sección para cambiar color de las palabras en la barra de sección*/
+/* Links del menú */
 .nav-link {
-    color: rgb(93, 94, 32);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -92,19 +92,18 @@ body {
     color: var(--primary-color);
 }
 
-/* Estilos de secciones */
+/* Secciones */
 .section {
     padding: 10px 20px;
     text-align: center;
 }
 
-/*Color y tamaño del area para la foto de perfil y resumen*/
+/* Perfil */
 .profile-section {
-    padding-top: 100px; /* Espacio para el header fijo */
-    background-color: rgb(243, 243, 243);
+    padding-top: 100px;
+    background-color: var(--light-gray);
 }
 
-/*Tamaño del titulo para estudios y experiencia*/
 .section-title {
     font-size: 2rem;
     color: var(--secondary-color);
@@ -122,52 +121,63 @@ body {
     margin: 10px auto 0;
 }
 
-/*Dimensiones y aspectos de la foto de perfil*/
 .profile-photo {
     width: 350px;
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    border: 20px solid #71ade6;
+    border: 12px solid var(--primary-color);
     margin-bottom: 1rem;
 }
 
-/*Tamaños y color para el nombre*/
 .profile-name {
     font-size: 2.5rem;
     margin: 0.5rem 0;
-    color: #71ade6;
+    color: var(--secondary-color);
 }
 
 .profile-summary {
     max-width: 800px;
     margin: 0 auto 2.5rem;
-    color: #0c35a5;
+    color: #444;
 }
 
+/* Estudios y experiencia */
 .list, .list-inline {
     list-style: none;
     padding: 0;
     margin-bottom: 1rem;
 }
-/*Sección para cambiar colores de fondo, tamaño de letra y alineación del texto o contenedores
-del area de Estudios realizados y experiencia laboral*/
+
 .list li {
-    background-color: rgb(219, 171, 109);
+    background-color: #f8bbd0; /* rosa suave */
     border-left: 5px solid var(--primary-color);
     padding: 1rem;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 5px rgb(201, 80, 80);
+    box-shadow: 0 2px 5px rgba(216,27,96,0.3);
     text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.list li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(216,27,96,0.4);
+}
+
+/* Habilidades */
 .list-inline li {
     display: inline-block;
-    background-color: #8badc4;
+    background-color: #f48fb1;
+    color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin: 0.5rem;
-    
+    transition: background-color 0.3s ease;
+}
+
+.list-inline li:hover {
+    background-color: #ec407a;
 }
 
 .skills-container {
@@ -181,7 +191,7 @@ del area de Estudios realizados y experiencia laboral*/
     text-align: center;
 }
 
-/* Linktree Section */
+/* Redes */
 .linktree-container {
     display: flex;
     flex-direction: column;
@@ -189,10 +199,9 @@ del area de Estudios realizados y experiencia laboral*/
     gap: 1rem;
 }
 
-/*Sección para cambiar el color a la letra o fondo de cada link en el Linktree */
 .linktree-link {
-    background-color: rgb(99, 184, 233);
-    color: rgb(250, 250, 250);
+    background-color: #f06292;
+    color: white;
     text-decoration: none;
     padding: 1rem 2rem;
     width: 250px;
@@ -200,56 +209,21 @@ del area de Estudios realizados y experiencia laboral*/
     transition: background-color 0.3s ease;
 }
 
-/*Efecto de otro color al pasar el mouse por el botón*/
 .linktree-link:hover {
-    background-color: #eee88f;
-}
-
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-/*Sección para darle color a los bordes, tamaño y ajustes a las cajas de texto del formulario*/
-.contact-form input,
-.contact-form textarea {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #b91a1a;
-    border-radius: 5px;
-}
-
-/*Sección para cambiar el color del botón de enviar mensaje y el color de la letra */
-.submit-button {
-    background-color: rgb(161, 241, 192);
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-/*Para cambiar el efecto de color al pasar el mouse por el boton de "Enviar Mensaje"*/
-.submit-button:hover {
-    background-color: #fafa6d;
+    background-color: #f8bbd0;
+    color: var(--secondary-color);
 }
 
 /* Footer */
 .footer {
     text-align: center;
     padding: 1rem;
-    background-color: #71ade6;
-    color: rgb(255, 255, 255);
+    background-color: var(--secondary-color);
+    color: white;
     font-size: 20px;
 }
 
-/* Media Queries para responsividad  ¡¡¡No tocar, nos da diseño responsive!!! */
+/* Responsive */
 @media (max-width: 800px) {
     .header {
         text-align: center;
@@ -267,16 +241,13 @@ del area de Estudios realizados y experiencia laboral*/
         gap: 0.5rem;
         align-items: center;
     }
-
     .section {
         padding: 60px 10px;
     }
-
     .profile-section {
         padding-top: 120px;
     }
-
     .list li {
         text-align: center;
     }
-}
+    }
